@@ -11,15 +11,15 @@ html {
   font-size: 16px; //16
 
   @include breakpoint($medium) {
-    font-size: 18px; //본문 사이즈, 18
+    font-size: 16px; // 18
   }
 
   @include breakpoint($large) {
-    font-size: 18px; //마크다운 문법의 헤더사이즈, 20
+    font-size: 16px; // 20
   }
 
   @include breakpoint($x-large) {
-    font-size: 18px; //제목사이즈, 22
+    font-size: 16px; // 22
   }
 
   -webkit-text-size-adjust: 100%;
