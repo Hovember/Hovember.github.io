@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "호잇 블로그"
+title                    : "호잇 블로그 : 공부 기록 저장소 📙"
 title_separator          : "|"
-subtitle                 : "공부 기록 저장소"
+subtitle                 : #""
 name                     : "SunghoKim"
 description              : "An amazing website."
 url                      : "https://Hovember.github.io"
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Sungho Kim"
+  name             : "Sungho Kim 😁"
   avatar           : "/assets/images/profile.png"
   bio              : "공부하는 사람"
   location         : "Republic of Korea"
