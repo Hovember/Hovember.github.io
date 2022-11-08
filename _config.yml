@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "호잇 블로그 : 공부 기록 저장소 📙"
+title                    : "호잇 블로그 : 공부 기록 저장소 📚"
 title_separator          : "|"
 subtitle                 : #""
 name                     : "SunghoKim"
@@ -27,7 +27,7 @@ repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-m
 teaser                   : # what "/assets/images/logo.png"
 logo                     : # "/assets/images/profile3.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : true # true, false (default) 경로
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -295,4 +295,7 @@ defaults:
       show_date: true
       toc: true 
       toc_sticky: true
+      toc_label: CONTENTS 
+      toc_icon: "check"
+      sidebar_main: true
 date_format: "%Y-%m-%d"

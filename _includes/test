@@ -1,0 +1,56 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <li>
+            📚 <span style="font-family:'Cafe24Oneprettynight';">Total</style> [ <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">]</style> 
+      </li>
+      <li>
+        <span class="nav__sub-title">test</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "ETC" %}
+                        <li><a href="/ETC/" class="">ETC ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Github" %}
+                        <li><a href="/Github/" class="">Github ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C++ games" %}
+                        <li><a href="/categories/cpp-games" class="">C++ 연습 문제 패키지 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Cpp Network" %}
+                        <li><a href="/categories/cpp-network" class="">C++ Boost.Asio 네트워크 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C Sharp" %}
+                        <li><a href="/categories/csharp" class="">C # ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "C" %}
+                        <li><a href="/categories/c" class="">C ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
+  </ul>
+</nav>

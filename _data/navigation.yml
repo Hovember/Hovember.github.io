@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "Home"
-    url: https://hovember.github.io
+  - title: "Recent"
+    url: /home/
   - title: "Category"
-    url: /categories/
+    url: /category/
+  - title: Year
+    url: /posts/
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
@@ -16,11 +18,15 @@ main:
   #   url: /sitemap/
 
 # sidebar-category:
-#   - title: "Category"
+#   - title: "A"
 #     children:
-#       - title: "Git & Github"
-#         url: "/categories"
+#       - title: "ETC"
+#         url: "/ETC/"
 #       - title: "카테고리B"
 #         url:  "/home/"
 #       - title: "카테고리C"
 #         url:  "/CategoryC"
+#   - title: "B"
+#     children: 
+#       - title: "Github"
+#         url: "/c"
