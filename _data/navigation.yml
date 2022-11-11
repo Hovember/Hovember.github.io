@@ -3,7 +3,7 @@ main:
   - title: "Recent"
     url: /home/
   - title: "Category"
-    url: /category/
+    url: /categories/
   - title: Year
     url: /posts/
   - title: "Quick-Start Guide"
