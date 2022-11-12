@@ -23,7 +23,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    font-family: $sans-serif-narrow;
+    font-family: $myfonts2; //sans-serif-narrow
 
     @include breakpoint($x-large) {
       max-width: $max-width;
@@ -50,6 +50,7 @@
   -ms-flex-item-align: center;
   align-self: center;
   font-weight: bold;
+  font-size: $type-size-4 //추가
   // z-index: 20;
 }
 
@@ -64,10 +65,9 @@
   margin-right: 0;
   width: 100%;
   clear: both;
-
+  //font-size: $type-size-4; //추가, 헤드 전체 글자 크기
   .site-nav {
     margin-left: 0;
-
     @include breakpoint($small) {
       float: right;
     }
@@ -85,7 +85,7 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
-
+  font-size: $type-size-3; //추가
   &--lg {
     padding-right: 2em;
     font-weight: 700;

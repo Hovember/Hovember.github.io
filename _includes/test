@@ -5,10 +5,10 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-            📚 Total [ {{sum}} ]
+        <!-- <span class="nav__title"></span>  -->
       </li>
       <li>
-        <span class="nav__sub-title">Category</span>
+        <span class="nav__sub-title">📚 Total [ {{sum}} ]</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "ETC" %}
