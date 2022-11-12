@@ -290,8 +290,6 @@ defaults:
       comments: # true
       share: false
       related: true
-      sidebar:
-        nav: "sidebar-category"
       show_date: true
       toc: true 
       toc_sticky: true
