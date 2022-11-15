@@ -296,4 +296,4 @@ defaults:
       toc_label: CONTENTS 
       toc_icon: "check"
       sidebar_main: true
-date_format: "%Y-%m-%d"
+date_format: "%F %A"

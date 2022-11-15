@@ -33,8 +33,10 @@ layout: default
           {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>{% endif %}
-          {% include page__meta.html %}
-        </header>
+          <!-- % include page__meta.html % -->
+          <p class="page__meta"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{"Date:"}}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%F %A" }}</time>&nbsp&nbsp&nbsp
+            <strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%F %A" }}</time></p>
+          </header>
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
@@ -55,7 +57,8 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        <!-- {% include page__taxonomy.html %}
+        {% include page__date.html %} -->
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
