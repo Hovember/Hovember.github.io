@@ -5,49 +5,49 @@
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
   <ul class="nav__items" id="category_tag_menu">
       <li>
-        <!-- <span class="nav__title"></span>  -->
+        <span class="nav__title">TOTAL [ {{sum}} ]</span> 
       </li>
       <li>
-        <span class="nav__sub-title">📚 Total [ {{sum}} ]</span>
-            <ul>
+        <span class="nav__sub-title">CATEGORIES📚</span>
+            <ul class="test1">
                 {% for category in site.categories %}
                     {% if category[0] == "ETC" %}
-                        <li><a href="/ETC/" class="">ETC ({{category[1].size}})</a></li>
+                        <li><a href="/ETC/" class="testname">0x00 ETC ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <ul class="test1">
                 {% for category in site.categories %}
                     {% if category[0] == "Github" %}
-                        <li><a href="/Github/" class="">Github ({{category[1].size}})</a></li>
+                        <li><a href="/Github/" class="testname">0x01 Github ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <ul class="test1">
                 {% for category in site.categories %}
                     {% if category[0] == "Network" %}
-                        <li><a href="/Network/" class="">Network ({{category[1].size}})</a></li>
+                        <li><a href="/Network/" class="testname">0x02 Network ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <ul class="test1">
                 {% for category in site.categories %}
                     {% if category[0] == "Linux" %}
-                        <li><a href="/linux/" class="">Linux ({{category[1].size}})</a></li>
+                        <li><a href="/linux/" class="testname">0x03 Linux ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <ul class="test1">
                 {% for category in site.categories %}
-                    {% if category[0] == "C Sharp" %}
-                        <li><a href="/categories/csharp" class="">C # ({{category[1].size}})</a></li>
+                    {% if category[0] == "Language" %}
+                        <li><a href="/Language/" class="testname">0x04 Language ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <ul class="test1">
                 {% for category in site.categories %}
-                    {% if category[0] == "C" %}
-                        <li><a href="/categories/c" class="">C ({{category[1].size}})</a></li>
+                    {% if category[0] == "" %}
+                        <li><a href="//" class=""> ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
