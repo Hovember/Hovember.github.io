@@ -19,10 +19,28 @@ Registry? Registry Artifacts?
 
 HKEY_CURRENT_USER 키에는 Console, Control Panel 등 하위 키가 있고, 이러한 각 키에도 하위 키가 있다. Colors 하위 키 아래는 GrayText, Hilight 등 값\(Value\)이 있고, 값에 대한 Data Type, Data가 있다.
 
+레지스트리 편집기를 실행하게 되면 5개의 트리 즉, 키가 있다.<br> HKEY_CLASSES_ROOT(HKCR)<br>
+- HKLM\\Software\\classes와 HKCU\\Software\\classes\(모음\)의 하위키로 구성 
+- 파일 확장자와 특정 프로그램을 연결시켜주는 파일 확장자 연결 키, 파일을 열 때 올바른 프로그램이 열리는지 확인
+
+***HKEY_CURRENT_USER(HKCU)***<br>
+- 현재 로그인한 사용자의 프로필 정보 
+- HKEY_USERS\\User SID의 하위키
+
+***HKEY_LOCAL_MACHINE(HKLM)***<br>
+- 시스템 하드웨어, 소프트웨어 설정 및 다양한 환경 정보로 컴퓨터 관련 구성 정보를 포함한다.
+
+***HKEY_USERS(HKU)***<br>
+- 컴퓨터에 로드된 모든 사용자의 프로필 정보를 포함 
+
+***HKEY_CURRENT_CONFIG(HKCC)***<br>
+- 시스템 시작 시 컴퓨터에서 사용되는 하드웨어 프로필 정보를 포함
+- HKLM\SYSTEM\CurrentControlSet\HardwareProfiles\Currnet의 하위키 
+
 ## Registry Hive
 
 *Hive*는 레지스트리의 키, 하위 키 및 값의 논리적\(사람이 볼 수 있는 형태\) 그룹이다. 
-운영체제가 시작되거나 사용자가 로그인할 때 지원 파일 집합이 메모리에 로드된다. 
+운영체제가 시작되거나 사용자가 로그인할 때 지원 파일들이 메모리에 로드된다. 
 
 지원 파일은 물리적인 파일이어서 일반적인 방법으로는 접근할 수 없다. \(Registry View를 사용, 메모리에 로드되어 있기 때문에 FTK Imager로 추출 후 사용하면 된다.\)
 
@@ -32,8 +50,7 @@ HKLM\\SYSTEM\\CurrentControlSet\\Control\\hivelist에서 볼 수 있다.
 활성 시스템 (Live System)이란, 전원에 연결되어 정상적으로 가동 중인 시스템을 의미한다.
 {: .notice--success}
 
-
-하이브 지원 파일은 대부분 Windows\\System32\\Config \(%SystemRoot%\\System32\\Config\) 폴더에 있다.
+하이브 지원 파일은 대부분 Windows\\System32\\Config \(%SystemRoot%\\System32\\Config\) 폴더에 있다.<br>Ntuser.dat는 User\\username/(%UserProfile%)에 있다.
 
 | 레지스트리 하이브 | 지원파일 |
 |:----------------:|:---------:|
@@ -48,14 +65,12 @@ HKLM\\SYSTEM\\CurrentControlSet\\Control\\hivelist에서 볼 수 있다.
 ❓<br>.alt는 HKLM\\System 하이브의 백업 복사본이다.<br>.sav는 하이브의 백업 복사본이다.<br>.log는 하이브의 키 및 값에 대한 변경 내용이다. 
 {: .notice--success}
 
-
-
-
 🤔<br>하이브는 파일인가? 
 마이크로소프트에서는 하이브 파일이라는 말이 없고 하이브에 대한 지원 파일이라고 나와있다. 하이브는 지원 파일 집합이 메모리에 로드되는 레지스트리의 키, 하위 키 및 값의 논리적 그룹이라고 나와있다. 하지만 많은 블로그에서 하이브 파일은 ~~다라는 글이 많다. 
 {: .notice}
 
 # Registry Artifacts
+
 
 
 
