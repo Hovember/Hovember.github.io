@@ -4,7 +4,7 @@ title: "Registry Forensic"
 categories:
   - Forensic
 date: 2022-11-22
-last_modified_at:
+last_modified_at: 2022-11-27
 ---
 
 Registry? Registry Artifacts?
@@ -19,7 +19,9 @@ Registry? Registry Artifacts?
 
 HKEY_CURRENT_USER 키에는 Console, Control Panel 등 하위 키가 있고, 이러한 각 키에도 하위 키가 있다. Colors 하위 키 아래는 GrayText, Hilight 등 값\(Value\)이 있고, 값에 대한 Data Type, Data가 있다.
 
-레지스트리 편집기를 실행하게 되면 5개의 트리 즉, 키가 있다.<br> HKEY_CLASSES_ROOT(HKCR)<br>
+레지스트리 편집기를 실행하게 되면 5개의 트리 즉, 키가 있다.<br> 
+
+***HKEY_CLASSES_ROOT(HKCR)***<br>
 - HKLM\\Software\\classes와 HKCU\\Software\\classes\(모음\)의 하위키로 구성 
 - 파일 확장자와 특정 프로그램을 연결시켜주는 파일 확장자 연결 키, 파일을 열 때 올바른 프로그램이 열리는지 확인
 
@@ -71,12 +73,31 @@ HKLM\\SYSTEM\\CurrentControlSet\\Control\\hivelist에서 볼 수 있다.
 
 # Registry Artifacts
 
+컴퓨터이름(호스트명)<br>
+HKLM\SYSTEM\ControlSet001\Control\ComputerName\ComputerName<br> 
 
+|HKLM\SOFTWARE\Microsoft|\Windows NT\CurrentVersion|
+|:---:|:---:|
+|ProductName|운영체제 이름|
+|RegisteredOwner|등록된 소유자|
+|RegisteredOrganization|등록된 조직|
+|InstallDate|운영체제 설치 날짜|
 
+설치 날짜는 유닉스 시간(Unix TimeStamp) 형식으로 나와있다.<br>
+예\) 16진수(10진수)
 
+유닉스 시간: 1970년 1월 1일 00:00:00 협정 세계 표준시(UTC)부터 경과 시간을 초로 환산하여 정수로 나타낸 것<br>
+타임스탬프: 시간 표기
+{: .notice--info}
+
+마지막 종료 시간<br> 
+HKLM\SYSTEM\ControlSet001\Control\Windows\ShutdownTime
+
+인코딩되어 있어 OS버전에 맞게 디코딩해야 된다.
+{: .notice--info}
 # Reference💻
 
-<https://learn.microsoft.com/ko-kr/windows/win32/sysinfo/registry><br> 
+<https://learn.microsoft.com/ko-kr/windows/win32/sysinfo/registry><br>
+<https://learn.microsoft.com/ko-kr/troubleshoot/windows-server/performance/windows-registry-advanced-users?source=recommendations><br> 
 <http://www.forensic-artifacts.com/registry-forensics/main><br>
-<https://learn.microsoft.com/ko-kr/troubleshoot/windows-server/performance/windows-registry-advanced-users?source=recommendations><br>
 {: .notice--warning}
