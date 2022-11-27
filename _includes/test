@@ -46,8 +46,15 @@
             </ul>
             <ul class="test1">
                 {% for category in site.categories %}
+                    {% if category[0] == "Forensic" %}
+                        <li><a href="/Forensic/" class="testname">0x05 Forensic ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="test1">
+                {% for category in site.categories %}
                     {% if category[0] == "" %}
-                        <li><a href="//" class=""> ({{category[1].size}})</a></li>
+                        <li><a href="//" class="testname">0x06 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -73,10 +73,17 @@ HKLM\\SYSTEM\\CurrentControlSet\\Control\\hivelist에서 볼 수 있다.
 
 # Registry Artifacts
 
-컴퓨터이름(호스트명)<br>
-HKLM\SYSTEM\ControlSet001\Control\ComputerName\ComputerName<br> 
 
-|HKLM\SOFTWARE\Microsoft|\Windows NT\CurrentVersion|
+## 컴퓨터이름(호스트명)
+
+HKLM\SYSTEM\ControlSet001\Control\ComputerName\ComputerName<br> 
+Value name: ComputerName
+
+## 기본 정보 
+
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion
+
+|Value name|Meaning|
 |:---:|:---:|
 |ProductName|운영체제 이름|
 |RegisteredOwner|등록된 소유자|
@@ -90,11 +97,31 @@ HKLM\SYSTEM\ControlSet001\Control\ComputerName\ComputerName<br>
 타임스탬프: 시간 표기
 {: .notice--info}
 
-마지막 종료 시간<br> 
-HKLM\SYSTEM\ControlSet001\Control\Windows\ShutdownTime
+## 마지막 종료 시간 
+
+HKLM\SYSTEM\ControlSet001\Control\Windows
+Value name: ShutdownTime
 
 인코딩되어 있어 OS버전에 맞게 디코딩해야 된다.
 {: .notice--info}
+
+## 마지막으로 로그온한 사용자
+
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI<br>
+Value name: LastLoggedOnUser<br>
+
+## TimeZoneInformation
+
+HKLM\SYSTEM\ControlSet001\Control\TimeZoneInformation<br>
+Value name: TimeZoneKeyName(표준시간대)<br>
+
+## 프로필목록 
+
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrnetVersion\ProfileList\\\<SID\>
+
+SID(Security ID): 윈도우에서 사용자나 그룹을 식별하는데 사용되는 번호(고유 이름) 
+{: .notice--info}
+
 # Reference💻
 
 <https://learn.microsoft.com/ko-kr/windows/win32/sysinfo/registry><br>
