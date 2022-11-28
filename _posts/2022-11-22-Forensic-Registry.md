@@ -76,12 +76,12 @@ HKLM\\SYSTEM\\CurrentControlSet\\Control\\hivelist에서 볼 수 있다.
 
 ## 컴퓨터이름(호스트명)
 
-HKLM\SYSTEM\ControlSet001\Control\ComputerName\ComputerName<br> 
+HKLM\\SYSTEM\\ControlSet001\\Control\\ComputerName\\ComputerName<br> 
 Value name: ComputerName
 
 ## 기본 정보 
 
-HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion
+HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion
 
 |Value name|Meaning|
 |:---:|:---:|
@@ -90,16 +90,16 @@ HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 |RegisteredOrganization|등록된 조직|
 |InstallDate|운영체제 설치 날짜|
 
-설치 날짜는 유닉스 시간(Unix TimeStamp) 형식으로 나와있다.<br>
-예\) 16진수(10진수)
+설치 날짜는 유닉스 시간\(Unix TimeStamp\) 형식으로 나와있다.<br>
+예\) 16진수\(10진수\)
 
-유닉스 시간: 1970년 1월 1일 00:00:00 협정 세계 표준시(UTC)부터 경과 시간을 초로 환산하여 정수로 나타낸 것<br>
+유닉스 시간: 1970년 1월 1일 00:00:00 협정 세계 표준시\(UTC\)부터 경과 시간을 초로 환산하여 정수로 나타낸 것<br>
 타임스탬프: 시간 표기
 {: .notice--info}
 
 ## 마지막 종료 시간 
 
-HKLM\SYSTEM\ControlSet001\Control\Windows
+HKLM\\SYSTEM\\ControlSet001\\Control\\Windows
 Value name: ShutdownTime
 
 인코딩되어 있어 OS버전에 맞게 디코딩해야 된다.
@@ -107,19 +107,19 @@ Value name: ShutdownTime
 
 ## 마지막으로 로그온한 사용자
 
-HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI<br>
+HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Authentication\\LogonUI<br>
 Value name: LastLoggedOnUser<br>
 
 ## TimeZoneInformation
 
-HKLM\SYSTEM\ControlSet001\Control\TimeZoneInformation<br>
+HKLM\\SYSTEM\\ControlSet001\\Control\\TimeZoneInformation<br>
 Value name: TimeZoneKeyName(표준시간대)<br>
 
 ## 프로필목록 
 
-HKLM\SOFTWARE\Microsoft\Windows NT\CurrnetVersion\ProfileList\\\<SID\>
+HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrnetVersion\\ProfileList\\\<SID\>
 
-SID(Security ID): 윈도우에서 사용자나 그룹을 식별하는데 사용되는 번호(고유 이름) 
+SID\(Security ID\): 윈도우에서 사용자나 그룹을 식별하는데 사용되는 번호\(고유 이름\) 
 {: .notice--info}
 
 # Reference💻
