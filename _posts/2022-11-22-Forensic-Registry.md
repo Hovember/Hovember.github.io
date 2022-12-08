@@ -4,7 +4,7 @@ title: "Registry Forensic"
 categories:
   - Forensic
 date: 2022-11-22
-last_modified_at: 2022-11-27
+last_modified_at: 2022-12-08
 ---
 
 Registry? Registry Artifacts?
@@ -109,6 +109,11 @@ Value name: ShutdownTime
 
 HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Authentication\\LogonUI<br>
 Value name: LastLoggedOnUser<br>
+
+🤔<br> 이 것도 마지막으로 로그온한 사용자일까?<br>
+SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon<br>
+Value name: LastUsername<br>
+{: .notice--info}
 
 ## TimeZoneInformation
 
