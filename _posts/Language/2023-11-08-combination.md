@@ -14,17 +14,13 @@ last_modified_at:
 #include <stdio.h>
 
 int main() {
-	//printf("!1:\t%d\n", !1);
-	//printf("!0:\t%d\n", !0);
-	//printf("!!1:\t%d\n", !!1);
-	//printf("!!0:\t%d\n", !!0);
 	int n = 4;
 	int k = 3;
 	int total = 1;
-	// printf("%d\n", comb1(n) / (comb1(n - k) * comb1(k))); // n이 커지면 StackOverflow 발생 
+
+	printf("%d\n", comb1(n) / (comb1(n - k) * comb1(k))); // n이 커지면 StackOverflow 발생 
 	printf("%d\n", comb2(n, k));
 	printf("%d\n", comb3(n, total) / (comb3(n - k, total) * comb3(k, total)));
-	printf("%d\n", solution(n, k));
 }
 
 int comb1(int a) {  // 팩토리얼 사용한다. 자기 자신을 호출한 뒤 결과를 기다리면서 스택 부하 
@@ -70,7 +66,5 @@ int comb3(int a, int total) { // 재귀함수 단점 해결 방법인 꼬리 재귀 함수 사용
 	if (a == 1) return total;
 
 	else return comb3(a - 1, a * total);
-
 }
-
 ```
