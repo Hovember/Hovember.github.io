@@ -1,13 +1,13 @@
 ---
 layout: single
-title: "[C Language] - ´À³¦Ç¥ µÎ °³!!"
+title: "[C Language] - ëŠë‚Œí‘œ ë‘ ê°œ!!"
 categories:
   - Language
 date: 2023-11-08
 last_modified_at: 
 ---
 
-³í¸®ºÎÁ¤¿¬»êÀÚ ´À³¦Ç¥ µÎ °³¸é?
+ë…¼ë¦¬ë¶€ì •ì—°ì‚°ì ëŠë‚Œí‘œ ë‘ ê°œë©´?
 {: .notice--primary}
 
 ```c
