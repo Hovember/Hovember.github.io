@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "호잇 블로그 : 공부 기록 저장소 📚"
+title                    : "공부 기록 저장소 📚"
 title_separator          : "|"
 subtitle                 : #""
-name                     : "SunghoKim"
+name                     : "HOIT"
 description              : "An amazing website."
 url                      : "https://Hovember.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -104,11 +104,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Sungho Kim 😁"
+  name             : "Hoit😁"
   avatar           : "/assets/images/profile.png"
   bio              : "Undergraduate"
   location         : "Republic of Korea"
-  email            : wowksh9799@gmail.com
+  email            : forlen9999@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -289,11 +289,11 @@ defaults:
       read_time: false
       comments: false
       share: false
-      related: true
+      related: false
       show_date: true
       toc: true 
       toc_sticky: true
-      toc_label: CONTENTS 
-      toc_icon: "check"
+      toc_label: 
+      toc_icon: ""
       sidebar_main: true
 date_format: "%F %A"

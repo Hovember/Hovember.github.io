@@ -156,12 +156,12 @@ $max-width: $x-large !default;
    Grid
    ========================================================================== */
 
+// $right-sidebar-width-narrow: 200px !default;
+// $right-sidebar-width: 230px !default; //사이드바와 메인 사이 거리 
+// $right-sidebar-width-wide: 450px !default;
 $right-sidebar-width-narrow: 200px !default;
-$right-sidebar-width: 230px !default; //사이드바와 메인 사이 거리 
-$right-sidebar-width-wide: 450px !default;
-//$right-sidebar-width-narrow: 200px !default;
-//$right-sidebar-width: 300px !default;
-//$right-sidebar-width-wide: 400px !default;
+$right-sidebar-width: 300px !default;
+$right-sidebar-width-wide: 400px !default;
 /*
    Other
    ========================================================================== */

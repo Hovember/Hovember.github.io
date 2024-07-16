@@ -127,7 +127,7 @@
   vertical-align: top;
   width: 36px;
   height: 36px;
-
+  padding: 0rem 3.5rem 0rem;
   @include breakpoint($large) {
     display: block;
     width: auto;
@@ -153,10 +153,12 @@
   line-height: 1;
 
   @include breakpoint($large) {
+    
     display: block;
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    //padding-left: 0;
+    //padding-right: 0;
+    padding: 0rem 3.5rem 0rem; //추가
   }
 
   a {
@@ -171,6 +173,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
+    
   }
 }
 .sidebar .author__name {
@@ -184,6 +187,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
+    
   }
 }
 
@@ -193,6 +197,7 @@
   vertical-align: middle;
   font-family: $sans-serif;
   z-index: 20;
+  padding: 0rem 3.5rem 0rem; // 추가
   cursor: pointer;
 
   li:last-child {

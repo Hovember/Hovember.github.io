@@ -1,0 +1,200 @@
+
+
+<!-- sidebar.html -->
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <li>
+        <!-- <span class="nav__title">TOTAL [ {{sum}} ]</span>  -->
+      </li>
+      <li>
+        <span class="nav__sub-title">{{ page.categories }}</span>
+            <ul class="test1">
+                
+                <li><a  class="testname"> {{  }}</a></li>
+                
+            </ul>        
+      </li>
+  </ul>
+</nav>
+
+<!--site.categories: 카테고리에 몇개의 포스터가 있는지 들어잇음
+category[0] 문자, category[1] 숫자 -->
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign categories_sorted = page.categories | sort_natural %}
+{% for category_word in categories_sorted %}
+  {% for category in site.categories %}
+  {% if category_word == "Forensic" %}
+     
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "Forensic" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>        
+        {% endif %}
+
+        {% if category_word == "ETC" %}
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "ETC" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if category_word == "Language" %}
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "Language" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if category_word == "Github" %}
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "Github" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if category_word == "Certification" %}
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "Certification" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if category_word == "Linux" %}
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "Linux" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if category_word == "Network" %}
+        <div class="entries-{{ entries_layout }}">
+          {% for post in category.last %}
+          {% if category[0] == "Network" %}
+            {% if post.id %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+            {% else %}
+                {% assign title = post.title %}
+            {% endif %}
+        
+            <div class="{{ include.type | default: 'list' }}__item">
+          
+              {% if post.link %}
+                <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" ></i><span class="sr-only">Permalink</span></a>
+              {% else %}
+                <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+              {% endif %}
+            
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+
+  {% endfor %}
+  {% endfor %}
+
