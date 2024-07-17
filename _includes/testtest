@@ -19,7 +19,7 @@
                     {% for post in category.last %}
                       {% if category[0] == "Forensic" %}
                         {% if post.id %}
-                          {% assign title = post.title %}
+                          {% assign title = post.title | markdownify %}
                         {% endif %}
                         <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                       {% endif %}
@@ -30,7 +30,7 @@
                   {% for post in category.last %}
                     {% if category[0] == "ETC" %}
                       {% if post.id %}
-                        {% assign title = post.title %}
+                        {% assign title = post.title | markdownify %}
                       {% endif %}
                       <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                     {% endif %}
@@ -41,7 +41,7 @@
                 {% for post in category.last %}
                   {% if category[0] == "Language" %}
                     {% if post.id %}
-                      {% assign title = post.title %}
+                      {% assign title = post.title | markdownify%}
                     {% endif %}
                     <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                   {% endif %}
@@ -52,7 +52,7 @@
                 {% for post in category.last %}
                   {% if category[0] == "Github" %}
                     {% if post.id %}
-                      {% assign title = post.title %}
+                      {% assign title = post.title | markdownify%}
                     {% endif %}
                     <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                   {% endif %}
@@ -63,7 +63,7 @@
               {% for post in category.last %}
                 {% if category[0] == "Linux" %}
                   {% if post.id %}
-                    {% assign title = post.title %}
+                    {% assign title = post.title | markdownify%}
                   {% endif %}
                   <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                 {% endif %}
@@ -74,7 +74,7 @@
                       {% for post in category.last %}
                         {% if category[0] == "Certification" %}
                           {% if post.id %}
-                            {% assign title = post.title %}
+                            {% assign title = post.title | markdownify%}
                           {% endif %}
                           <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                         {% endif %}
@@ -85,7 +85,7 @@
                     {% for post in category.last %}
                       {% if category[0] == "Network" %}
                         {% if post.id %}
-                          {% assign title = post.title %}
+                          {% assign title = post.title | markdownify%}
                         {% endif %}
                         <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                       {% endif %}
