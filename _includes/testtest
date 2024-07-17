@@ -22,6 +22,7 @@
                           {% assign title = post.title | markdownify %}
                         {% endif %}
                         <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                        {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
