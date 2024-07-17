@@ -418,7 +418,7 @@
     }
 
     ul {
-      margin-bottom: 1em;
+      margin-bottom: 0em; // 1em, 카테고리들 사이 공간
     }
 
     a {
@@ -438,7 +438,7 @@
 }
 
 .nav__list .nav__items {
-  margin: 2rem 0;
+  margin: 0rem 0; // 2rem 0;
   font-size: 1.25rem; //1.25
 
   a {
@@ -473,7 +473,7 @@
     max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
     overflow: visible;
     opacity: 1;
-    margin-top: 1em;
+    margin-top: 1em; //toggle menu와 category 사이 공간 
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -490,8 +490,9 @@
 
 .nav__sub-title {
   display: block;
-  margin: 0.2rem 0;
-  padding: 0rem 3.5rem 0rem; // 0.25(위공간), 0(왼쪽공간), 1(아래공간, 테스트임)
+  float:left;
+  width:100%; // 0.25(위공간), 0(왼쪽공간), 1(아래공간, 테스트임)
+  margin-left: 0.25em;
   font-family: $myfonts2; //$sans-serif-narrow;
   font-size: $type-size-3; // 6, variables.scss에 정의
   font-weight: bold;
@@ -500,14 +501,34 @@
 }
 
 .test1 {
-  padding: 0rem 3.5rem 0rem;
+  float:left;
+  padding: 0rem 0.3rem;
   font-size: $type-size-2;
+    &:hover { // 커서 갖다댔을 때
+    color: #FFCCFF;
+    transform: scale( 2.0 );
+  }
 }
 
 .testname {
   font-family: $myfonts2;
 }
 
+.test2 {
+  float:left;
+  width:100%;
+  padding: 0rem 0.3rem;
+  font-size: $type-size-2;
+
+  &:hover { // 커서 갖다댔을 때
+    color: #FFCCFF;
+  }
+}
+
+.testname2 {
+  font-size: $type-size-6;
+  font-family: $myfonts2;
+}
 /*
      Table of contents navigation
      ========================================================================== */
@@ -520,65 +541,78 @@
   border-radius: $border-radius;
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
-  padding: 0rem 3.5rem 0rem; // 추가한 부분
+   // 추가한 부분
   //float: middle; // 추가
   
-  // .nav__title {
-  //   color: #fff;
-  //   font-size: $type-size-6;
-  //   padding: 0.5rem 0rem;
-  //   padding-left: 0.5rem;
-  //   font-family: $sans-serif-narrow;
-  //   background: $primary-color;
-  //   border-top-left-radius: $border-radius;
-  //   border-top-right-radius: $border-radius
+  /*.nav__title {
+     color: #fff;
+    font-size: $type-size-6;
+    padding: 0.5rem 0rem;
+    padding-left: 0.5rem;
+    font-family: $sans-serif-narrow;
+     background: $primary-color;
+   border-top-left-radius: $border-radius;
+   border-top-right-radius: $border-radius
     
-  // }
-
+   }
+*/
   // Scrollspy marks toc items as .active when they are in focus
-  .active a {
-    @include yiq-contrasted($active-color);
+  .active a { // 화면 내리거나 올렸을 때
+    //@include yiq-contrasted(#CCFFE5);
+    color: #FFCCFF;
+    transform: translate(50px);
   }
 }
 
 .toc__menu {
   margin: 0;
   padding: 0;
-  width: 130%;
+  width: 100%;
   list-style: none;
-  font-size: $type-size-6;
+  font-size: $type-size-6; // 화면 줄였을 때 폰트 크기
 
   @include breakpoint($large) {
-    font-size: $type-size-7;
+    font-size: $type-size-7; // 정상 화면일 때 폰트 크기
+  }
+
+  /* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &scroll {
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
   }
 
   a {
     display: block;
-    padding: 0.25rem 0.75rem;
-    color: $muted-text-color;
+    padding: 0rem 0.75rem;
+    color: $dark-gray;
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-underline-position: under;
-
-    &:hover {
-      color: $text-color;
-      
+    //border-bottom: 1px solid $border-color;
+    font-size: $type-size-3;
+    // text-decoration: underline wavy red;
+    
+    &:hover { // 커서 갖다댔을 때
+      color: #ea85bc;
+      // transform: rotateX(-360deg);
+      transform: translate(50px);
     }
   }
 
   li ul > li a {
-    padding-left: 1.75rem; //1.25
+    padding-left: 1.25rem; //1.25
     font-weight: normal;
-    text-decoration-style: dashed;
+    font-size: $type-size-4;
+   
     
   }
 
   li ul li ul > li a {
     padding-left: 1.75rem;
-    text-decoration-style: dotted;
+    font-size: $type-size-5;
   }
 
   li ul li ul li ul > li a {

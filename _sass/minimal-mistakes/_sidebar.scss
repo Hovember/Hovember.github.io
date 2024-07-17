@@ -143,6 +143,11 @@
       border: 1px solid $border-color;
     }
   }
+
+  &:hover { 
+    transition: all 3s;
+    transform: translatex( 50px );
+  }
 }
 
 .author__content {
