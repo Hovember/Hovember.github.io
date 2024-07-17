@@ -514,21 +514,7 @@
   font-family: $myfonts2;
 }
 
-.test2 {
-  float:left;
-  width:100%;
-  padding: 0rem 0.3rem;
-  font-size: $type-size-2;
 
-  &:hover { // 커서 갖다댔을 때
-    color: #FFCCFF;
-  }
-}
-
-.testname2 {
-  font-size: $type-size-6;
-  font-family: $myfonts2;
-}
 /*
      Table of contents navigation
      ========================================================================== */
