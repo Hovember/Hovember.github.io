@@ -18,13 +18,8 @@
                   {% if category_word == "Forensic" %}
                     {% for post in category.last %}
                       {% if category[0] == "Forensic" %}
-                      {% if post.id %}
-                        {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-                      {% else %}
-                        {% assign title = post.title %}
-                      {% endif %}
+                      {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                         <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
-                        {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
                       {% endif %}
                     {% endfor %}
                   {% endif %}
@@ -32,9 +27,7 @@
                   {% if category_word == "ETC" %}
                   {% for post in category.last %}
                     {% if category[0] == "ETC" %}
-                      {% if post.id %}
-                        {% assign title = post.title | markdownify %}
-                      {% endif %}
+                    {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                       <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                     {% endif %}
                   {% endfor %}
@@ -43,9 +36,7 @@
                 {% if category_word == "Language" %}
                 {% for post in category.last %}
                   {% if category[0] == "Language" %}
-                    {% if post.id %}
-                      {% assign title = post.title | markdownify%}
-                    {% endif %}
+                  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                     <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                   {% endif %}
                 {% endfor %}
@@ -54,9 +45,7 @@
                 {% if category_word == "Github" %}
                 {% for post in category.last %}
                   {% if category[0] == "Github" %}
-                    {% if post.id %}
-                      {% assign title = post.title | markdownify%}
-                    {% endif %}
+                  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                     <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                   {% endif %}
                 {% endfor %}
@@ -65,9 +54,7 @@
               {% if category_word == "Linux" %}
               {% for post in category.last %}
                 {% if category[0] == "Linux" %}
-                  {% if post.id %}
-                    {% assign title = post.title | markdownify%}
-                  {% endif %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                   <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                 {% endif %}
               {% endfor %}
@@ -76,9 +63,7 @@
                     {% if category_word == "Certification" %}
                       {% for post in category.last %}
                         {% if category[0] == "Certification" %}
-                          {% if post.id %}
-                            {% assign title = post.title | markdownify%}
-                          {% endif %}
+                        {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                           <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                         {% endif %}
                       {% endfor %}
@@ -87,9 +72,7 @@
                   {% if category_word == "Network" %}
                     {% for post in category.last %}
                       {% if category[0] == "Network" %}
-                        {% if post.id %}
-                          {% assign title = post.title | markdownify%}
-                        {% endif %}
+                      {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                         <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
                       {% endif %}
                     {% endfor %}
