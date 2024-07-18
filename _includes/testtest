@@ -20,7 +20,7 @@
                       {% if category[0] == "Forensic" %}
                       {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                         <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
-                        <li> {{ post.excerpt | strip_html}}</li>
+                        <li> {{ post.excerpt | strips_html}}</li>
                       {% endif %}
                     {% endfor %}
                   {% endif %}
