@@ -1,0 +1,89 @@
+{% assign categories_sorted = page.categories | sort_natural %}
+
+<!-- sidebar.html -->
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <li>
+        <!-- <span class="nav__title">TOTAL [ {{sum}} ]</span>  -->
+      </li>
+      <li>
+        <span class="nav__sub-title">{{ page.categories }}</span>
+            <ul class="test2">
+             
+              {% for category_word in categories_sorted %}
+                {% for category in site.categories %}
+
+                  {% if category_word == "Forensic" %}
+                    {% for post in category.last %}
+                      {% if category[0] == "Forensic" %}
+                      {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                        <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                        <li> {{ post.excerpt | markdownify | strip_html }}</li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+
+                  {% if category_word == "ETC" %}
+                  {% for post in category.last %}
+                    {% if category[0] == "ETC" %}
+                    {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                      <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+
+                {% if category_word == "Language" %}
+                {% for post in category.last %}
+                  {% if category[0] == "Language" %}
+                  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                    <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+                {% if category_word == "Github" %}
+                {% for post in category.last %}
+                  {% if category[0] == "Github" %}
+                  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                    <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+              {% if category_word == "Linux" %}
+              {% for post in category.last %}
+                {% if category[0] == "Linux" %}
+                {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                  <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+
+                    {% if category_word == "Certification" %}
+                      {% for post in category.last %}
+                        {% if category[0] == "Certification" %}
+                        {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                          <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+
+                  {% if category_word == "Network" %}
+                    {% for post in category.last %}
+                      {% if category[0] == "Network" %}
+                      {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                        <li><a class="testname2" href="{{ post.url  }}">{{ title }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
+
+                {% endfor %}
+              {% endfor %}
+            </ul>        
+      </li>
+  </ul>
+</nav>
+<!--site.categories: 카테고리에 몇개의 포스터가 있는지 들어잇음
+category[0] 문자, category[1] 숫자 -->
