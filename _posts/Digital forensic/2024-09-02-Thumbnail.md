@@ -35,7 +35,7 @@ last_modified_at: 2024-09-02
 \#\# 숫자보다 같거나 작은 픽셀 크기의 이미지로 저장된다.<br>
 *1280부터는 뭔가 섞여 있는 느낌이 든다. 577x122이도 들어있다. 
 
-Thumbcache viewer로 썸네일을 확인할 수 있다. 
+Thumbcache viewer 도구로 썸네일을 확인할 수 있다. 
 
 # Thumbnail 구조
 
@@ -85,10 +85,12 @@ Thumbcache viewer로 썸네일을 확인할 수 있다.
 
 ![Thumbnail](/assets/forensic/Thumbnail/cache_entry.png "Thumbnail Cache Entry")
 
+Thumbcache Viewer 도구로 확인한 모습 
+
 ![Thumbnail](/assets/forensic/Thumbnail/thumbcache_viewer.png "thumbcache_viewer")
 
 
-Data Offset = Cache Entry Offset + (Cache Entry Size – Data Size)
+<span style = "color: red">Data Offset = Cache Entry Offset + (Cache Entry Size – Data Size)</span>
 
 ![Thumbnail](/assets/forensic/Thumbnail/Header+Entry.png "Thumbnail Header+Entry")
 
