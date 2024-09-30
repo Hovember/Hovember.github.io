@@ -5,7 +5,7 @@ excerpt: "cmd, powershell"
 categories:
   - Forensic
 date: 2024-09-29
-last_modified_at: 2024-09-29
+last_modified_at: 2024-09-30
 ---
 
 # cmd
