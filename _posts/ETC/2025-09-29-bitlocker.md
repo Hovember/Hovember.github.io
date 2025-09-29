@@ -7,9 +7,11 @@ categories:
 date: 2025-09-29
 last_modified_at: 2025-09-29
 ---
+<br>
+<br>
+관리자 권한으로 CMD 실행<br>
 
-cmd 관리자 권한 실행<br>
-잠금 명령어 
+## 잠금 명령어 
 
 ```yaml
 manage-bde.exe -lock -ForceDismount <드라이브명:>
@@ -17,7 +19,7 @@ manage-bde.exe -lock -ForceDismount <드라이브명:>
 
 e.g., manage-bde.exe -lock -forcedismount d: <br>
 
-잠금 해제 명령어
+## 잠금 해제 명령어
 
 ```yaml
 manage-bde.exe -unlock <드라이브명:> -password
