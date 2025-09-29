@@ -25,13 +25,16 @@ Example: manage-bde.exe -lock -forcedismount d:
 
 ```yaml
 manage-bde.exe -unlock <드라이브명:> -password
+Example : manage-bde -unlock D: -password
 ```
 
 ```yaml
 manage-bde.exe -unlock <드라이브명:> -recoverypassword 복-구-키
+Example : manage-bde -unlock D: -recoverypassword 111111-222222-333333-444444-555555-666666-777777-888888
 ```
 
 ```yaml
 manage-bde.exe -unlock <드라이브명:> -recoverykey "경로"
+Example : manage-bde -unlock D: -recoverykey "D:\RecoveryKey\123456-789012-...-888888.BEK"
 ```
 
