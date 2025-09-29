@@ -18,7 +18,7 @@ manage-bde.exe -lock -ForceDismount <드라이브명:>
 ```
 
 ```makefile
-Example: manage-bde.exe -lock -forcedismount d: <br>
+Example: manage-bde.exe -lock -forcedismount d:
 ```
 
 ## 잠금 해제 명령어
