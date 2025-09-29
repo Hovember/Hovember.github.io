@@ -9,5 +9,7 @@ last_modified_at: 2025-09-29
 ---
 
 cmd 관리자 권한 실행<br>
-manage-bde.exe -lock -ForceDismount <드라이브명:><br>
+```yaml
+manage-bde.exe -lock -ForceDismount <드라이브명:>
+```
 e.g., manage-bde.exe -lock -forcedismount d: <br>
