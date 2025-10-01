@@ -4,7 +4,7 @@ excerpt: "Port Number"
 categories:
   - Network
 date: 2025-09-30
-last_modified_at: 2025-09-30
+last_modified_at: 2025-10-01
 ---
 <br>
 
@@ -124,10 +124,10 @@ ip 주소나 도메인 포트 번호 같은 자원을 관리하는 공식 기관
 옵션 사용 안 할 경우 기본적인 연결 목록만 출력
 
 **옵션**
-- /-a : 모든 포트 표시
-- /-n : "ip:port" 형식으로 표시 -> 이거 안 쓰면 도메인 해석해서 시간 오래 걸림
-- /-o : PID(프로세스ID) 표시
-- /-p : 지정한 프로토콜 연결 표시
+- -a : 모든 포트 표시
+- -n : "ip:port" 형식으로 표시 -> 이거 안 쓰면 도메인 해석해서 시간 오래 걸림
+- -o : PID(프로세스ID) 표시
+- -p : 지정한 프로토콜 연결 표시
 
 ```yaml
 현재 열린 포트 확인 (LISTEN)
@@ -151,6 +151,8 @@ netstat -ano | findstr :443
 
 netstat -ano | find "ESTABLISHED
 
-taskkill /PID 443 /F 
+tasklist /FI "PID eq 443" (어떤 프로세스인지 확인)
+
+taskkill /PID 443 /F (/F 강제종료)
 ```
 
