@@ -141,9 +141,9 @@ netstat -anop tcp | findstr "LISTEN"
 netstat -ano | findstr :443
 ```
 
-- LISTEN : 열려 있는 포트, 외부 연결 기다리고 있는 서버 소켓
+- LISTENING : 열려 있는 포트, 외부 연결 기다리고 있는 서버 소켓
 - ESTABLISHED : 현재 연결이 실제로 활성화되어 통신 중인 상태 즉, 클라이언트와 서버가 데이터를 주고받고 있는 상태
-- TIME_WAIT : 연결이 종료된 후 잠시 대기 중인 상태
+- CLOSE_WAIT : 연결이 종료된 후 잠시 대기 중인 상태
 
 
 ```yaml
