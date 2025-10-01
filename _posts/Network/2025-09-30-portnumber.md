@@ -115,9 +115,42 @@ ip 주소나 도메인 포트 번호 같은 자원을 관리하는 공식 기관
 
 사용자가 임의로 사용 가능한 포트 번호이다.
 
+# 윈도우 포트 확인 명령어
+
+<span style="background-color:yellow"> netstat </span><br>
+프로토콜 통계와 현재 TCP/IP 네트워크 연결을 표시하는 명령어<br>
+즉, 네트워크 상태를 보여주는 명령어로, 컴퓨터와 연결 중이거나 대기 중인 모든 네트워크 연결 정보 확인 가능
+
+옵션 사용 안 할 경우 기본적인 연결 목록만 출력
+
+**옵션**
+- /-a : 모든 포트 표시
+- /-n : "ip:port" 형식으로 표시 -> 이거 안 쓰면 도메인 해석해서 시간 오래 걸림
+- /-o : PID(프로세스ID) 표시
+- /-p : 지정한 프로토콜 연결 표시
+
+```yaml
+현재 열린 포트 확인 (LISTEN)
+- TCP, UDP 모두 확인
+netstat -ano | find "LISTEN"
+
+TCP만 확인
+netstat -anop tcp | findstr "LISTEN"
+
+433 포트로 접속한 ip 확인
+netstat -ano | findstr :443
+```
+
+- LISTEN : 열려 있는 포트, 외부 연결 기다리고 있는 서버 소켓
+- ESTABLISHED : 현재 연결이 실제로 활성화되어 통신 중인 상태 즉, 클라이언트와 서버가 데이터를 주고받고 있는 상태
+- TIME_WAIT : 연결이 종료된 후 잠시 대기 중인 상태
 
 
+```yaml
+현재 열려 있는 연결 확인해서 프로세스 종료 까지 
 
+netstat -ano | find "ESTABLISHED
 
-
+taskkill /PID 443 /F 
+```
 
