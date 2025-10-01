@@ -4,7 +4,7 @@ excerpt: "메일 프로토콜을 알아보자"
 categories:
   - Network
 date: 2025-09-30
-last_modified_at: 2025-09-30
+last_modified_at: 2025-10-01
 ---
 <br>
 이해하기 쉽게 그림을 넣을 생각입니다.
