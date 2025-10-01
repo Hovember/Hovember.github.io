@@ -156,3 +156,8 @@ tasklist /FI "PID eq 443" (어떤 프로세스인지 확인)
 taskkill /PID 443 /F (/F 강제종료)
 ```
 
+```yaml
+열려 잇는 포트 프로세스 확인하기
+for /f "tokens=5" %a in ('netstat -ano ^| find "LISTEN"') do tasklist /FI "PID eq %a"
+```
+
